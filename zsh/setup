@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Symlink startup files
+ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc

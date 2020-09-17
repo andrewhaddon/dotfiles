@@ -1,0 +1,44 @@
+{
+    // Privacy
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
+    // Multi-cursor modifier key
+    "editor.multiCursorModifier": "ctrlCmd",
+    
+    // Appearance
+    "breadcrumbs.enabled": false,
+    "editor.fontFamily": "Source Code Pro, Menlo",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "600",
+    "editor.minimap.enabled": true,
+    "editor.rulers": [78],
+    "editor.tabSize": 2,
+    "editor.wordWrap": "off",
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#ffffff1A"
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+    "terminal.integrated.fontSize": 14,
+    
+    // Files
+    "files.insertFinalNewline": true,
+    
+    // cSpell
+    "cSpell.language": "en-GB",
+    "cSpell.userWords": [
+        "Shopify",
+        "analytics",
+        "fallback",
+        "markup",
+        "pseudocode",
+        "timescale",
+        "unary"
+    ],
+
+    // Markdown preview 
+    "markdown.preview.markEditorSelection": false
+}

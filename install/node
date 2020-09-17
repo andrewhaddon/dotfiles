@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Installs Node.js via nvm
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+# Install node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+nvm install node
+
+# Set default Node version for new shells to alias 'default'
+nvm alias default node
+
+# Update npm to latest version
+npm install npm@latest -g

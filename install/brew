@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Installs common applications and tools using Homebrew
+
+# Install Homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Tap homebrew-cask-versions  
+brew tap homebrew/cask-versions
+
+# Install packages
+brew install ffmpeg
+brew install git
+brew install openssl
+brew install tree
+brew install wget
+brew install zsh
+
+# Install apps
+brew cask install 1password
+brew cask install alfred
+brew cask install docker
+#brew cask install dropbox
+brew cask install expressvpn
+brew cask install firefox
+brew cask install firefox-developer-edition
+brew cask install google-chrome
+brew cask install iterm2
+brew cask install omnigraffle
+brew cask install rar
+Brew cask install rectangle
+brew cask install sequel-pro
+brew cask install slack
+brew cask install spotify
+brew cask install sync
+brew cask install toggl
+brew cask install transmit
+brew cask install visual-studio-code
+#brew cask install whatsapp
+
+# Install fonts
+brew tap homebrew/cask-fonts
+brew cask install font-source-code-pro

@@ -1,0 +1,21 @@
+# Folder view configuration files
+# 'Icon\r' here '?' is used to represent a carriage return
+.DS_Store
+Icon?
+
+# Dropbox settings and caches
+.dropbox
+.dropbox.attr
+.dropbox.cache
+
+# Xcode user settings
+xcuserdata/
+
+# Adobe Bridge manual sorting settings
+.BridgeSort
+
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env

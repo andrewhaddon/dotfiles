@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Symlink configuration files
+ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/git/.gitignore ~/.gitignore
