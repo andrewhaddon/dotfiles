@@ -17,27 +17,26 @@ brew install wget
 brew install zsh
 
 # Install apps
-brew cask install 1password
-brew cask install alfred
-brew cask install docker
-#brew cask install dropbox
-brew cask install expressvpn
-brew cask install firefox
-brew cask install firefox-developer-edition
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install omnigraffle
-brew cask install rar
-Brew cask install rectangle
-brew cask install sequel-pro
-brew cask install slack
-brew cask install spotify
-brew cask install sync
-brew cask install toggl
-brew cask install transmit
-brew cask install visual-studio-code
-#brew cask install whatsapp
+brew install --cask 1password
+brew install --cask alfred
+brew install --cask docker
+#brew install --cask dropbox
+brew install --cask expressvpn
+brew install --cask firefox
+brew install --cask firefox-developer-edition
+brew install --cask google-chrome
+brew install --cask iterm2
+brew install --cask omnigraffle
+brew install --cask rar
+brew install --cask rectangle
+brew install --cask sequel-pro
+brew install --cask slack
+#brew install --cask spotify
+brew install --cask sync
+brew install --cask toggl
+brew install --cask transmit
+brew install --cask visual-studio-code
 
 # Install fonts
 brew tap homebrew/cask-fonts
-brew cask install font-source-code-pro
+brew install --cask font-source-code-pro
