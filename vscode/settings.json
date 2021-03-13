@@ -7,11 +7,9 @@
     "editor.multiCursorModifier": "ctrlCmd",
     
     // Appearance
-    "breadcrumbs.enabled": false,
     "editor.fontFamily": "Source Code Pro, Menlo",
     "editor.fontSize": 14,
     "editor.fontWeight": "600",
-    "editor.minimap.enabled": true,
     "editor.rulers": [78],
     "editor.tabSize": 2,
     "editor.wordWrap": "off",
@@ -30,7 +28,6 @@
     // cSpell
     "cSpell.language": "en-GB",
     "cSpell.userWords": [
-        "Shopify",
         "analytics",
         "fallback",
         "markup",
@@ -38,7 +35,13 @@
         "timescale",
         "unary"
     ],
+    "cSpell.enableFiletypes": [
+        "!plaintext"
+    ],
 
     // Markdown preview 
-    "markdown.preview.markEditorSelection": false
+    "markdown.preview.markEditorSelection": false,
+
+    // Extensions
+    "extensions.ignoreRecommendations": false
 }
