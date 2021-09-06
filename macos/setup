@@ -14,6 +14,9 @@ sudo scutil --set ComputerName "Mac"
 # Set local hostname
 sudo scutil --set LocalHostName "Mac"
 
+# Set DNS servers
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 
+
 # Set user picture
 sudo ln -sf ~/dotfiles/macos/user-picture.png /Library/User\ Pictures/User.png
 dscl . delete /Users/andrew JPEGPhoto
