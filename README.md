@@ -60,6 +60,6 @@ Some of the changes in the `macos/setup` script require the terminal to have 'Fu
 
 ![Full Disk Access](https://i.imgur.com/xikZjfM.png)
 
-## *h/t*
+---
 
-- [Mathias Bynens](https://github.com/mathiasbynens) for his [dotfiles](https://github.com/mathiasbynens/dotfiles) repository.
+HT to [Mathias Bynens](https://github.com/mathiasbynens) for his [dotfiles](https://github.com/mathiasbynens/dotfiles) repository.  
