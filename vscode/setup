@@ -4,7 +4,6 @@
 code --install-extension aaron-bond.better-comments
 code --install-extension alefragnani.bookmarks
 code --install-extension bierner.markdown-preview-github-styles
-code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension dakara.transformer
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension msjsdiag.debugger-for-chrome
