@@ -12,6 +12,7 @@ brew tap homebrew/cask-versions
 brew install ffmpeg
 brew install git
 brew install openssl
+brew install svn
 brew install tree
 brew install wget
 brew install zsh
@@ -27,7 +28,6 @@ brew install --cask expressvpn
 # brew install --cask firefox-developer-edition
 brew install --cask google-chrome
 brew install --cask iterm2
-# brew install --cask omnigraffle
 brew install --cask rar
 brew install --cask rectangle
 # brew install --cask sequel-pro
