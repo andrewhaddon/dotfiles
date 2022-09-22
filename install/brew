@@ -9,6 +9,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew tap homebrew/cask-versions
 
 # Install packages
+brew install exiftool
 brew install ffmpeg
 brew install git
 brew install openssl
