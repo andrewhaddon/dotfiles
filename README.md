@@ -62,4 +62,4 @@ Some of the changes in the `macos/setup` script require the terminal to have 'Fu
 
 ---
 
-HT to [Mathias Bynens](https://github.com/mathiasbynens) for his [dotfiles](https://github.com/mathiasbynens/dotfiles) repository.  
+H/T to [Mathias Bynens](https://github.com/mathiasbynens/dotfiles).  
