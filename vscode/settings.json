@@ -1,47 +1,64 @@
 {
-    // Privacy
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
 
-    // Multi-cursor modifier key
-    "editor.multiCursorModifier": "ctrlCmd",
-    
-    // Appearance
-    "editor.fontFamily": "Source Code Pro, Menlo",
-    "editor.fontSize": 14,
-    "editor.fontWeight": "600",
-    "editor.rulers": [78],
-    "editor.tabSize": 2,
-    "editor.wordWrap": "off",
-    "window.zoomLevel": 0,
-    "workbench.activityBar.visible": true,
-    "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#ffffff1A"
-    },
-    "workbench.iconTheme": "vscode-icons",
-    "vsicons.dontShowNewVersionMessage": true,
-    "terminal.integrated.fontSize": 14,
-    
-    // Files
-    "files.insertFinalNewline": true,
-    
-    // cSpell
-    "cSpell.language": "en-GB",
-    "cSpell.userWords": [
-        "analytics",
-        "fallback",
-        "markup",
-        "pseudocode",
-        "timescale",
-        "unary"
-    ],
-    "cSpell.enableFiletypes": [
-        "!plaintext"
-    ],
+  // - off: Disables all product telemetry.
+  "telemetry.telemetryLevel": "off",
 
-    // Markdown preview 
-    "markdown.preview.markEditorSelection": false,
+  // The modifier to be used to add multiple cursors with the mouse. The Go to Definition and Open Link mouse gestures will adapt such that they do not conflict with the multicursor modifier.
+  "editor.multiCursorModifier": "ctrlCmd",
 
-    // Extensions
-    "extensions.ignoreRecommendations": false
+  // Controls the font family.
+  "editor.fontFamily": "Source Code Pro, Menlo",
+
+  // Controls the font size in pixels.
+  "editor.fontSize": 14,
+
+  // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
+  "editor.fontWeight": "600",
+
+  // Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.
+  "editor.rulers": [78],
+
+  // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+
+  // Controls how lines should wrap.
+  "editor.wordWrap": "off",
+
+  // Controls the visibility of the activity bar in the workbench.
+  "workbench.activityBar.visible": true,
+
+  // Overrides colors from the currently selected color theme.
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#242424"
+  },
+
+  // Specifies the file icon theme used in the workbench or 'null' to not show any file icons.
+  "workbench.iconTheme": "vscode-icons",
+
+  // Controls the font size in pixels of the terminal.
+  "terminal.integrated.fontSize": 14,
+  
+  // When enabled, insert a final new line at the end of the file when saving it.
+  "files.insertFinalNewline": true,
+  
+  // Configure settings to be overridden for the markdown language.
+  "[markdown]": {
+    // Controls whether all non-basic ASCII characters are highlighted. Only characters between U+0020 and U+007E, tab, line-feed and carriage-return are considered basic ASCII.
+    "editor.unicodeHighlight.nonBasicASCII": false
+  },
+
+  // Configure settings to be overridden for the plaintext language.
+  "[plaintext]": {
+    // Controls whether all non-basic ASCII characters are highlighted. Only characters between U+0020 and U+007E, tab, line-feed and carriage-return are considered basic ASCII.
+    "editor.unicodeHighlight.nonBasicASCII": false
+  },
+  
+  // Mark the current editor selection in the Markdown preview.
+  "markdown.preview.markEditorSelection": false,
+
+  // When enabled, the notifications for extension recommendations will not be shown.
+  "extensions.ignoreRecommendations": false,
+
+  // - off: The editor will never be optimized for usage with a Screen Reader.
+  "editor.accessibilitySupport": "off"
 }
