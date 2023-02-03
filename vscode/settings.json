@@ -1,5 +1,4 @@
 {
-
   // - off: Disables all product telemetry.
   "telemetry.telemetryLevel": "off",
 
