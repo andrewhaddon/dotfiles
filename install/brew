@@ -24,7 +24,7 @@ brew install --cask alfred
 # brew install --cask discord
 # brew install --cask docker
 # brew install --cask dropbox
-brew install --cask expressvpn
+# brew install --cask expressvpn
 # brew install --cask firefox
 # brew install --cask firefox-developer-edition
 brew install --cask google-chrome
@@ -34,7 +34,7 @@ brew install --cask rectangle
 # brew install --cask sequel-pro
 # brew install --cask slack
 # brew install --cask spotify
-brew install --cask sync
+# brew install --cask sync
 # brew install --cask toggl
 brew install --cask transmit
 brew install --cask visual-studio-code
