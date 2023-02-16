@@ -3,28 +3,24 @@
 # Installs common applications and tools using Homebrew
 
 # Install Homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Tap homebrew-cask-versions  
 brew tap homebrew/cask-versions
 
 # Install packages
 brew install exiftool
-brew install ffmpeg
 brew install git
 brew install openssl
 brew install svn
 brew install tree
 brew install wget
-brew install zsh
+# brew install zsh
 
 # Install apps
-brew install --cask 1password
 brew install --cask alfred
-# brew install --cask discord
+brew install --cask discord
 # brew install --cask docker
-# brew install --cask dropbox
-# brew install --cask expressvpn
 # brew install --cask firefox
 # brew install --cask firefox-developer-edition
 brew install --cask google-chrome
@@ -32,10 +28,7 @@ brew install --cask iterm2
 brew install --cask rar
 brew install --cask rectangle
 # brew install --cask sequel-pro
-# brew install --cask slack
-# brew install --cask spotify
-# brew install --cask sync
-# brew install --cask toggl
+brew install --cask spotify
 brew install --cask transmit
 brew install --cask visual-studio-code
 
