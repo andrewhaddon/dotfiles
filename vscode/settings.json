@@ -59,5 +59,8 @@
   "extensions.ignoreRecommendations": false,
 
   // - off: The editor will never be optimized for usage with a Screen Reader.
-  "editor.accessibilitySupport": "off"
+  "editor.accessibilitySupport": "off",
+
+  // Hide the new version message when vscode-icons updates
+  "vsicons.dontShowNewVersionMessage": true
 }
