@@ -6,70 +6,8 @@ osascript -e 'tell application "System Preferences" to quit'
 # Validate sudo credentials
 sudo -v
 
-
-# General 
-# Set computer name
-sudo scutil --set ComputerName "Mac"
-
-# Set local hostname
-sudo scutil --set LocalHostName "Mac"
-
-# Set DNS servers
-networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 
-
-# Set user picture
-sudo ln -sf ~/dotfiles/macos/user-picture.png /Library/User\ Pictures/User.png
-dscl . delete /Users/andrew JPEGPhoto
-sudo dscl . create /Users/andrew Picture "/Library/User Pictures/User.png"
-
-# Disable Crash Reporter
-defaults write com.apple.CrashReporter DialogType -string "none"
-
-# Disable Gatekeeper first launch warning
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-
-# Set computer sleep to never
-#sudo systemsetup -setcomputersleep Off > /dev/null
-
-# Set display sleep to 10 minutes
-sudo systemsetup -setdisplaysleep 10 > /dev/null
-
-# Disable screen saver
-defaults write com.apple.screensaver idleTime -int 0
-
-# Set top-left hot corner to display sleep
-defaults write com.apple.dock wvous-tl-corner -int 10
-defaults write com.apple.dock wvous-tl-modifier -int 0
-
-# Hide menu bar mirroring options
-defaults write com.apple.airplay showInMenuBarIfPresent -bool false
-
-
-# Sound 
-# Disable startup chime
-sudo nvram StartupMute=%01
-
-# Disable ui sound effects
-defaults write -g com.apple.sound.uiaudio.enabled -int 0
-
-
-# Appearance 
-# Set menu bar clock format to digital, 24-hour, day, date, hours, minutes
-defaults write com.apple.menuextra.clock IsAnalog -bool false
-defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
-
-
-# Finder 
-# Show all file extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Disable warning on changing file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-# Disable warning on emptying trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
-
-# Show external disks, removable media and servers on desktop
+# Desktop and screen saver
+# Show disks and servers on desktop
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
@@ -80,8 +18,130 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:textSize 11" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
-# Set default view preferences
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+# Disable screen saver
+defaults write com.apple.screensaver idleTime -int 0
+
+# Set top-left hot corner to display sleep
+defaults write com.apple.dock wvous-tl-corner -int 10
+defaults write com.apple.dock wvous-tl-modifier -int 0
+
+# Dock
+# Set Dock position
+defaults write com.apple.dock 'orientation' -string "left"
+
+# Set Dock item size
+defaults write com.apple.dock tilesize -int 36
+
+# Lock Dock size
+defaults write com.apple.dock size-immutable -bool true
+
+# Remove default items from Dock
+defaults write com.apple.dock persistent-apps -array
+
+# Don't show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+# Set window minimise effect
+defaults write com.apple.dock mineffect -string "scale"
+
+# Disable Dock magnification
+defaults write com.apple.dock magnification -bool false
+
+# Automatically show and hide Dock
+defaults write com.apple.dock autohide -bool true
+
+# Spotlight
+
+# Language and Region
+
+# Users and groups
+# Set user picture
+sudo ln -sf ~/dotfiles/macos/user-picture.png /Library/User\ Pictures/User.png
+dscl . delete /Users/andrew JPEGPhoto
+sudo dscl . create /Users/andrew Picture "/Library/User Pictures/User.png"
+
+# Security and privacy
+# Disable Gatekeeper first launch warning
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Disable remote control infrared reciever
+sudo defaults write /Library/Preferences/com.apple.driver.AppleIRController DeviceEnabled -bool no
+
+# Disable Crash Reporter
+defaults write com.apple.CrashReporter DialogType -string "none"
+
+# Network
+# Set computer name
+sudo scutil --set ComputerName "Mac"
+
+# Set local hostname
+sudo scutil --set LocalHostName "Mac"
+
+# Set DNS servers
+networksetup -setdnsservers Ethernet 1.1.1.1 1.0.0.1
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
+
+# Bluetooth
+
+# Sound
+# Disable startup chime
+sudo nvram StartupMute=%01
+
+# Disable ui sound effects
+defaults write -g com.apple.sound.uiaudio.enabled -int 0
+
+# Keyboard
+# Disable automatic spelling correction
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable automatic capitalisation
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable automatic period substitution (double-space)
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Disable smart dashes
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disable smart quotes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Track pad 
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
+
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+
+# Mouse
+# Enable mouse secondary click
+defaults write com.apple.AppleMultitouchMouse MouseButtonMode TwoButton
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
+
+# Set mouse tracking speed
+defaults write -g com.apple.mouse.scaling 1.5
+
+# Displays
+# Hide menu bar mirroring options
+defaults write com.apple.airplay showInMenuBarIfPresent -bool false
+
+# Date and time
+# Set menu bar clock format to digital, 24-hour, day, date, hours, minutes
+defaults write com.apple.menuextra.clock IsAnalog -bool false
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
+
+# Finder
+# Show all file extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Disable warning on changing file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Disable warning on emptying trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Set default search scope to current folder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -99,94 +159,10 @@ defaults write com.apple.finder ShowPathbar -bool false
 # Hide absolute path in the title of Finder windows
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
 
+# Set default view preferences
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
-# Dock 
-# Set Dock position
-defaults write com.apple.dock 'orientation' -string "left"
-
-# Set Dock item size
-defaults write com.apple.dock tilesize -int 36
-
-# Lock Dock size
-defaults write com.apple.dock size-immutable -bool true
-
-# Remove default items from Dock
-defaults write com.apple.dock persistent-apps -array
-
-# Don’t show recent applications in Dock
-defaults write com.apple.dock show-recents -bool false
-
-# Set window minimise effect
-defaults write com.apple.dock mineffect -string "scale"
-
-# Disable Dock magnification
-defaults write com.apple.dock magnification -bool false
-
-# Automatically show and hide Dock
-defaults write com.apple.dock autohide -bool true
-
-
-# Keyboard and mouse 
-# Disable automatic spelling correction
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-# Disable automatic capitalisation
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
-
-# Disable automatic period substitution (double-space)
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
-
-# Disable smart dashes
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-# Disable smart quotes
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
-# Enable mouse secondary click
-defaults write com.apple.AppleMultitouchMouse MouseButtonMode TwoButton
-defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
-
-# Set mouse tracking speed
-defaults write -g com.apple.mouse.scaling 1.5
-
-# Set trackpad secondary click to click in bottom-right corner
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-
-defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
-defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
-
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-
-
-# Spotlight 
-# Set search results preferences 
-defaults write com.apple.spotlight orderedItems -array \
-  '{enabled = 1;name = APPLICATIONS;}' \
-  '{enabled = 0;name = BOOKMARKS;}' \
-  '{enabled = 1;name = CONTACT;}' \
-  '{enabled = 0;name = DIRECTORIES;}' \
-  '{enabled = 1;name = DOCUMENTS;}' \
-  '{enabled = 1;name = "EVENT_TODO";}' \
-  '{enabled = 0;name = FONTS;}' \
-  '{enabled = 0;name = IMAGES;}' \
-  '{enabled = 0;name = MESSAGES;}' \
-  '{enabled = 0;name = MOVIES;}' \
-  '{enabled = 0;name = MUSIC;}' \
-  '{enabled = 1;name = PDF;}' \
-  '{enabled = 1;name = PRESENTATIONS;}' \
-  '{enabled = 0;name = SOURCE;}' \
-  '{enabled = 1;name = SPREADSHEETS;}' \
-  '{enabled = 0;name = "SYSTEM_PREFS";}' \
-  '{enabled = 1;name = "MENU_CONVERSION";}' \
-  '{enabled = 1;name = "MENU_DEFINITION";}' \
-  '{enabled = 1;name = "MENU_EXPRESSION";}' \
-  '{enabled = 0;name = "MENU_OTHER";}' \
-  '{enabled = 0;name = "MENU_SPOTLIGHT_SUGGESTIONS";}'
-
-
-# Calendar.app
+# Calendar
 # Set day start (min)
 defaults write com.apple.iCal "first minute of work hours" -int 480
 
@@ -202,8 +178,8 @@ defaults write com.apple.iCal "first shown minute of day" -int 300
 # Show Birthdays calendar
 defaults write com.apple.iCal "display birthdays calendar" -bool true
 
-# Show Holidays calendar
-defaults write com.apple.iCal "add holiday calendar" -bool true
+# Hide Holidays calendar
+defaults write com.apple.iCal "add holiday calendar" -bool false
 
 # Disable invitation messages in Notification Centre
 defaults write com.apple.iCal InvitationNotificationsDisabled -bool true
@@ -220,8 +196,7 @@ defaults write com.apple.iCal "Show Week Numbers" -bool true
 # Set view to 'Week'
 defaults write com.apple.iCal "last calendar view description" -string "7-day"
 
-
-# Safari.app
+# Safari
 # Show Develop menu
 defaults write com.apple.safari.sandboxbroker ShowDevelopMenu -bool true
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
