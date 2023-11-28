@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # Quit System Preferences 
 osascript -e 'tell application "System Preferences" to quit'
@@ -56,7 +56,7 @@ defaults write com.apple.dock autohide -bool true
 
 # Users and groups
 # Set user picture
-sudo ln -sf ~/dotfiles/macos/user-picture.png /Library/User\ Pictures/User.png
+sudo ln -sf ~/.dotfiles/macos/user-picture.png /Library/User\ Pictures/User.png
 dscl . delete /Users/andrew JPEGPhoto
 sudo dscl . create /Users/andrew Picture "/Library/User Pictures/User.png"
 

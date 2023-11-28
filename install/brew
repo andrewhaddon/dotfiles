@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # Installs common applications and tools using Homebrew
 
@@ -15,12 +15,10 @@ brew install openssl
 brew install svn
 brew install tree
 brew install wget
-# brew install zsh
 
 # Install apps
 brew install --cask alfred
-brew install --cask discord
-# brew install --cask docker
+# brew install --cask discord
 # brew install --cask firefox
 # brew install --cask firefox-developer-edition
 brew install --cask google-chrome
@@ -28,8 +26,7 @@ brew install --cask iterm2
 brew install --cask rar
 brew install --cask rectangle
 # brew install --cask sequel-pro
-brew install --cask spotify
-brew install --cask transmit
+# brew install --cask transmit
 brew install --cask visual-studio-code
 
 # Install fonts

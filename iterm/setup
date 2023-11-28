@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # Set custom preferences folder
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfiles/iterm"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true

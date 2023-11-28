@@ -11,13 +11,13 @@ xcode-select --install
 Clone the repository:  
 
 ```shell
-git clone https://github.com/andrewhaddon/dotfiles.git ~/dotfiles
+git clone https://github.com/andrewhaddon/dotfiles.git ~/.dotfiles
 ```
 
 Run the scripts:
 
 ```shell
-cd ~/dotfiles
+cd ~/.dotfiles
 ./<script>
 ```
 

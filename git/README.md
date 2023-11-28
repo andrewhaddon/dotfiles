@@ -2,7 +2,7 @@
 
 ## Configuration files
 
-`.gitconfig` includes the additional configuration file `.gitconfig.local` to 
+`.gitconfig` includes the additional configuration file `~/.gitconfig.local` to 
 keep private directives outside of the git repository.
 
 `.gitconfig.local` sample:

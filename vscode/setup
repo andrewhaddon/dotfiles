@@ -1,11 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # Install extensions
 code --install-extension aaron-bond.better-comments
 code --install-extension alefragnani.bookmarks
 code --install-extension dakara.transformer
-code --install-extension dbaeumer.vscode-eslint
 code --install-extension vscode-icons-team.vscode-icons
 
 # Symlink user settings file
-ln -sf ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -sf ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
