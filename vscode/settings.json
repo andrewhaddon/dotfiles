@@ -23,9 +23,6 @@
   // Controls how lines should wrap.
   "editor.wordWrap": "off",
 
-  // Controls the visibility of the activity bar in the workbench.
-  "workbench.activityBar.visible": true,
-
   // Overrides colors from the currently selected color theme.
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#242424"
@@ -64,5 +61,6 @@
   "editor.accessibilitySupport": "off",
 
   // Hide the new version message when vscode-icons updates
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.activityBar.location": "top"
 }
