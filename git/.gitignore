@@ -1,12 +1,6 @@
-# Folder view configuration files
-# 'Icon\r' here '?' is used to represent a carriage return
+# macOS folder view configuration files
 .DS_Store
 Icon?
-
-# Dropbox settings and caches
-.dropbox
-.dropbox.attr
-.dropbox.cache
 
 # Xcode user settings
 xcuserdata/
@@ -14,8 +8,11 @@ xcuserdata/
 # Adobe Bridge manual sorting settings
 .BridgeSort
 
-# Dependency directories
+# Node dependencies
 node_modules/
 
 # Environment variables
-.env
+*.env
+
+# Local configuration files
+*.local
