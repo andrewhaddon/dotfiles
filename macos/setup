@@ -151,7 +151,7 @@ defaults write com.apple.finder NewWindowTarget -string "PfLo" && \
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 
 # Keep folders on top: In windows when sorting by name
-defaults write com.apple.finder "_FXSortFoldersFirst" -bool true
+# defaults write com.apple.finder "_FXSortFoldersFirst" -bool true
 
 # Show status bar in Finder windows
 defaults write com.apple.finder ShowStatusBar -bool true
