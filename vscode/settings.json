@@ -11,6 +11,9 @@
   // Controls the font size in pixels.
   "editor.fontSize": 14,
 
+  // Configures font variations. Can be either a boolean to enable/disable the translation from font-weight to font-variation-settings or a string for the value of the CSS 'font-variation-settings' property.
+  "editor.fontVariations": false,
+
   // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
   "editor.fontWeight": "600",
 
@@ -23,13 +26,29 @@
   // Controls how lines should wrap.
   "editor.wordWrap": "off",
 
+  // Controls whether the minimap is shown.
+  "editor.minimap.enabled": false,
+
+  // - off: The editor will never be optimized for usage with a Screen Reader.
+  "editor.accessibilitySupport": "off",
+
   // Overrides colors from the currently selected color theme.
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#242424"
   },
+  
+  // Controls the location of the Activity Bar. It can either show to the `default` or `top` / `bottom` of the Primary and Secondary Side Bar or `hidden`.
+  //  - default: Show the Activity Bar of the Primary Side Bar on the side.
+  //  - top: Show the Activity Bar on top of the Primary and Secondary Side Bar.
+  //  - bottom: Show the Activity Bar at the bottom of the Primary and Secondary Side Bar.
+  //  - hidden: Hide the Activity Bar in the Primary and Secondary Side Bar.
+  "workbench.activityBar.location": "top",
 
   // Specifies the file icon theme used in the workbench or 'null' to not show any file icons.
   "workbench.iconTheme": "vscode-icons",
+
+  // Hide the new version message when vscode-icons updates
+  "vsicons.dontShowNewVersionMessage": true,
 
   // Controls the font size in pixels of the terminal.
   "terminal.integrated.fontSize": 14,
@@ -57,10 +76,6 @@
   // When enabled, the notifications for extension recommendations will not be shown.
   "extensions.ignoreRecommendations": false,
 
-  // - off: The editor will never be optimized for usage with a Screen Reader.
-  "editor.accessibilitySupport": "off",
-
-  // Hide the new version message when vscode-icons updates
-  "vsicons.dontShowNewVersionMessage": true,
-  "workbench.activityBar.location": "top"
+  // Enable the British dictionary.
+  "cSpell.language": "en-GB"
 }
