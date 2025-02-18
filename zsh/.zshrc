@@ -27,4 +27,4 @@ setopt HIST_VERIFY
 setopt NO_CASE_GLOB
 
 # Shortcuts
-WIP=$HOME/Files/Projects/Open\ Projects/
+# WIP=$HOME/Files/Projects/WIP
