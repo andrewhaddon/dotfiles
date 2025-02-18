@@ -5,17 +5,20 @@
   // The modifier to be used to add multiple cursors with the mouse. The Go to Definition and Open Link mouse gestures will adapt such that they do not conflict with the multicursor modifier.
   "editor.multiCursorModifier": "ctrlCmd",
 
-  // Controls the font family.
-  "editor.fontFamily": "Source Code Pro, Menlo",
-
   // Controls the font size in pixels.
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
 
-  // Configures font variations. Can be either a boolean to enable/disable the translation from font-weight to font-variation-settings or a string for the value of the CSS 'font-variation-settings' property.
-  "editor.fontVariations": false,
+  // Controls the font family.
+  "editor.fontFamily": "JetBrains Mono, monospace",
+
+  // Configures font ligatures or font features. Can be either a boolean to enable/disable ligatures or a string for the value of the CSS 'font-feature-settings' property.
+  "editor.fontLigatures": true,
 
   // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
-  "editor.fontWeight": "600",
+  // "editor.fontWeight": "400",
+  
+  // Configures font variations. Can be either a boolean to enable/disable the translation from font-weight to font-variation-settings or a string for the value of the CSS 'font-variation-settings' property.
+  // "editor.fontVariations": false,
 
   // Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.
   "editor.rulers": [78],
