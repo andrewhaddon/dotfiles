@@ -16,3 +16,6 @@ node_modules/
 
 # Local configuration files
 *.local
+
+# SSG output directories
+_site/
