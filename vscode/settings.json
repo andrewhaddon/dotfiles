@@ -1,4 +1,7 @@
 {
+  // Prevent VS Code from auto-updating to unsupported version
+  "update.mode": "none",
+
   // - off: Disables all product telemetry.
   "telemetry.telemetryLevel": "off",
 
