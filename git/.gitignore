@@ -1,18 +1,6 @@
-# macOS folder view configuration files
 .DS_Store
-Icon?
-
-# Xcode user settings
-xcuserdata/
-
-# Adobe Bridge manual sorting settings
-.BridgeSort
-
-# Node dependencies
-node_modules/
-
-# Environment variables
 *.env
-
-# Local configuration files
 *.local
+Icon?
+node_modules/
+xcuserdata/
