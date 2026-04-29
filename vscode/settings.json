@@ -1,87 +1,61 @@
 {
-  // Prevent VS Code from auto-updating to unsupported version
-  "update.mode": "none",
+    "update.mode": "none", // latest release supported by macOS Catalina (10.15) is 1.97.
+    "telemetry.telemetryLevel": "off",
 
-  // - off: Disables all product telemetry.
-  "telemetry.telemetryLevel": "off",
+    // Editor
+    "editor.accessibilitySupport": "off",
+    "editor.fontSize": 16,
+    "editor.rulers": [80],
+    "editor.wordWrap": "on",
+    "workbench.editor.centeredLayoutFixedWidth": true,
+    "workbench.iconTheme": "vscode-icons",
 
-  // The modifier to be used to add multiple cursors with the mouse. The Go to Definition and Open Link mouse gestures will adapt such that they do not conflict with the multicursor modifier.
-  "editor.multiCursorModifier": "ctrlCmd",
+    // Markdown Preview
+    "markdown.preview.doubleClickToSwitchToEditor": true,
+    "markdown.preview.fontSize": 18,
+    "markdown.preview.markEditorSelection": false,
+    
+    // Terminal
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontSize": 14,
 
-  // Controls the font size in pixels.
-  "editor.fontSize": 16,
+    // Languages
+    // Markdown
+    "[markdown]": {
+      "editor.lineNumbers": "off",
+      "editor.minimap.enabled": false,
+      "editor.occurrencesHighlight": "off",
+      "editor.quickSuggestions": {
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+      },
+      "editor.selectionHighlight": false,
+      "editor.wordWrap": "off",
+      "editor.wordWrapColumn": 80,
+      "files.insertFinalNewline": true
+    },
+    
+    "[plaintext]": {
+      "editor.quickSuggestions":{
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+      },
+      "editor.unicodeHighlight.ambiguousCharacters": true,
+      "editor.wordWrap": "off",
+      "files.insertFinalNewline": true
+    },
 
-  // Controls the font family.
-  "editor.fontFamily": "JetBrains Mono, 'Apple Color Emoji', monospace",
-
-  // Configures font ligatures or font features. Can be either a boolean to enable/disable ligatures or a string for the value of the CSS 'font-feature-settings' property.
-  "editor.fontLigatures": true,
-
-  // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
-  // "editor.fontWeight": "400",
-  
-  // Configures font variations. Can be either a boolean to enable/disable the translation from font-weight to font-variation-settings or a string for the value of the CSS 'font-variation-settings' property.
-  // "editor.fontVariations": false,
-
-  // Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.
-  "editor.rulers": [78],
-
-  // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
-  "editor.tabSize": 2,
-
-  // Controls how lines should wrap.
-  "editor.wordWrap": "off",
-
-  // Controls whether the minimap is shown.
-  "editor.minimap.enabled": false,
-
-  // - off: The editor will never be optimized for usage with a Screen Reader.
-  "editor.accessibilitySupport": "off",
-
-  // Overrides colors from the currently selected color theme.
-  "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#242424"
-  },
-  
-  // Controls the location of the Activity Bar. It can either show to the `default` or `top` / `bottom` of the Primary and Secondary Side Bar or `hidden`.
-  //  - default: Show the Activity Bar of the Primary Side Bar on the side.
-  //  - top: Show the Activity Bar on top of the Primary and Secondary Side Bar.
-  //  - bottom: Show the Activity Bar at the bottom of the Primary and Secondary Side Bar.
-  //  - hidden: Hide the Activity Bar in the Primary and Secondary Side Bar.
-  "workbench.activityBar.location": "top",
-
-  // Specifies the file icon theme used in the workbench or 'null' to not show any file icons.
-  "workbench.iconTheme": "vscode-icons",
-
-  // Hide the new version message when vscode-icons updates
-  "vsicons.dontShowNewVersionMessage": true,
-
-  // Controls the font size in pixels of the terminal.
-  "terminal.integrated.fontSize": 14,
-  
-  // When enabled, insert a final new line at the end of the file when saving it.
-  "files.insertFinalNewline": true,
-  
-  // Configure settings to be overridden for the markdown language.
-  "[markdown]": {
-    // Controls whether all non-basic ASCII characters are highlighted. Only characters between U+0020 and U+007E, tab, line-feed and carriage-return are considered basic ASCII.
-    "editor.unicodeHighlight.nonBasicASCII": false
-  },
-
-  // Configure settings to be overridden for the plaintext language.
-  "[plaintext]": {
-    // Controls whether all non-basic ASCII characters are highlighted. Only characters between U+0020 and U+007E, tab, line-feed and carriage-return are considered basic ASCII.
-    "editor.unicodeHighlight.nonBasicASCII": false,
-    // When enabled, insert a final new line at the end of the file when saving it. 
-    "files.insertFinalNewline": false
-  },
-
-  // Mark the current editor selection in the Markdown preview.
-  "markdown.preview.markEditorSelection": false,
-
-  // When enabled, the notifications for extension recommendations will not be shown.
-  "extensions.ignoreRecommendations": false,
-
-  // Enable the British dictionary.
-  "cSpell.language": "en-GB"
+    "[yaml]": {
+      "editor.unicodeHighlight.ambiguousCharacters": true,
+      "editor.wordWrap": "off",
+      "files.autoGuessEncoding": false,
+      "files.encoding": "utf8",
+      "files.insertFinalNewline": true
+    },
+    
+    // Extensions
+    // streetsidesoftware.code-spell-checker
+    "cSpell.language": "en-GB"
 }
